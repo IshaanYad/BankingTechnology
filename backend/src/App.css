@@ -1,0 +1,141 @@
+/* src/App.css */
+
+/* Root container for app content */
+.App {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.App h1,
+.App h2,
+.App h3 {
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+/* Paragraphs */
+.App p {
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Links */
+.App a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.App a:hover,
+.App a:focus {
+  color: #0056b3;
+  outline: none;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.App button {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.App button:hover,
+.App button:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+.App button:disabled,
+.App button[disabled] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Forms */
+.App form {
+  margin-top: 20px;
+}
+
+.App label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.App input[type="text"],
+.App input[type="email"],
+.App input[type="password"],
+.App input[type="number"],
+.App select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.App input:focus,
+.App select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Tables */
+.App table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.App th,
+.App td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.App th {
+  background-color: #f8f9fa;
+  font-weight: 700;
+}
+
+/* Error and Success messages */
+.error-message {
+  color: #dc3545;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  color: #28a745;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .App {
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .App button {
+    width: 100%;
+  }
+}

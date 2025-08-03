@@ -63,8 +63,16 @@ public class CustomerServiceImpl implements CustomerService {
             );
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            // Generate JWT token
-            return jwtProvider.generateToken(username);
+            // Fetch the user's role
+            Optional<Customer> customerOpt = customerRepository.findByUsername(username);
+            if (customerOpt.isEmpty()) {
+                throw new RuntimeException("User not found");
+            }
+            Role role = customerOpt.get().getRole();
+
+            // Generate JWT token with username and role
+            return jwtProvider.generateToken(username, role.name());
+
         } catch (Exception e) {
             throw new RuntimeException("Invalid username or password");
         }
